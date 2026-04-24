@@ -1,0 +1,68 @@
+{
+  "country": "OM",
+  "timezone": "Asia/Muscat",
+  "lastUpdated": "2026-04-24",
+  "source": "Manual seed data; can be updated by GitHub Actions from a public holidays API.",
+  "holidays": [
+    {
+      "start": "2026-05-27T00:00:00+04:00",
+      "end": "2026-05-31T23:59:59+04:00",
+      "status": "tentative",
+      "ar": {
+        "name": "إجازة عيد الأضحى",
+        "date": "27–31 مايو 2026",
+        "note": "قابلة للتأكيد حسب الرؤية والإعلان الرسمي."
+      },
+      "en": {
+        "name": "Eid Al Adha Holiday",
+        "date": "May 27–31, 2026",
+        "note": "Subject to official confirmation and moon sighting."
+      }
+    },
+    {
+      "start": "2026-06-18T00:00:00+04:00",
+      "end": "2026-06-18T23:59:59+04:00",
+      "status": "tentative",
+      "ar": {
+        "name": "رأس السنة الهجرية",
+        "date": "18 يونيو 2026",
+        "note": "قد تخضع للتأكيد الرسمي."
+      },
+      "en": {
+        "name": "Islamic New Year",
+        "date": "June 18, 2026",
+        "note": "May be subject to official confirmation."
+      }
+    },
+    {
+      "start": "2026-08-27T00:00:00+04:00",
+      "end": "2026-08-27T23:59:59+04:00",
+      "status": "tentative",
+      "ar": {
+        "name": "المولد النبوي الشريف",
+        "date": "27 أغسطس 2026",
+        "note": "قد تخضع للتأكيد الرسمي."
+      },
+      "en": {
+        "name": "Prophet Muhammad's Birthday",
+        "date": "August 27, 2026",
+        "note": "May be subject to official confirmation."
+      }
+    },
+    {
+      "start": "2026-11-25T00:00:00+04:00",
+      "end": "2026-11-26T23:59:59+04:00",
+      "status": "confirmed",
+      "ar": {
+        "name": "إجازة اليوم الوطني",
+        "date": "25–26 نوفمبر 2026",
+        "note": "إجازة وطنية لمدة يومين."
+      },
+      "en": {
+        "name": "National Day Holiday",
+        "date": "November 25–26, 2026",
+        "note": "Two-day national holiday."
+      }
+    }
+  ]
+}
