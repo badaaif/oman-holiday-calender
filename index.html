@@ -6,91 +6,36 @@
   <title>إجازات سلطنة عمان</title>
   <meta name="description" content="إجازات سلطنة عمان القادمة مع عداد تنازلي بسيط ودعم العربية والإنجليزية.">
   <style>
-    :root{
-      --bg:#f6f7f4;--text:#1d2b27;--muted:#6b7773;--card:#ffffff;--line:#e3e7e2;--green:#0f6b4f;--soft:#edf5f1;--gold:#a36a00;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7}
-    .wrap{width:min(860px,calc(100% - 28px));margin:auto;padding:28px 0 40px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
-    .brand{font-weight:800;font-size:1.15rem;color:var(--green)}
-    button{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:999px;padding:9px 14px;font-weight:700;cursor:pointer}
-    .hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(25,40,35,.06);margin-bottom:18px}
-    .kicker{color:var(--green);font-weight:800;margin-bottom:8px;font-size:.95rem}
-    h1{margin:0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;letter-spacing:-.03em}
-    .lead{margin:12px 0 0;color:var(--muted);font-size:1.05rem}
-    .count-card{background:var(--soft);border:1px solid #d9e8e0;border-radius:20px;padding:22px;margin-top:22px}
-    .next-label{color:var(--muted);font-size:.9rem;font-weight:700;margin-bottom:4px}
-    .next-name{font-size:1.55rem;font-weight:900;margin-bottom:2px}
-    .next-date{color:var(--green);font-weight:800;margin-bottom:18px}
-    .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-    .box{background:#fff;border:1px solid var(--line);border-radius:16px;text-align:center;padding:14px 8px}
-    .num{display:block;font-size:2rem;font-weight:900;line-height:1;color:var(--green)}
-    .unit{display:block;color:var(--muted);font-size:.82rem;margin-top:7px;font-weight:700}
-    .section-title{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin:26px 0 12px}
-    h2{font-size:1.35rem;margin:0}.updated{font-size:.85rem;color:var(--muted);text-align:end}
-    .list{display:grid;gap:10px}.item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start}.name{font-weight:900}.date{color:var(--green);font-weight:750;margin-top:2px}.note{grid-column:1/-1;color:var(--muted);font-size:.92rem}.tag{font-size:.75rem;border-radius:999px;padding:5px 9px;background:var(--soft);color:var(--green);font-weight:800;white-space:nowrap}.tag.tentative{background:#fff5df;color:var(--gold)}
-    .notice{margin-top:16px;color:var(--muted);font-size:.92rem}.notice strong{color:var(--text)}
-    footer{margin-top:24px;color:var(--muted);font-size:.85rem;text-align:center}
-    @media(max-width:560px){header{align-items:flex-start}.hero{padding:22px}.timer{grid-template-columns:repeat(2,1fr)}.item{grid-template-columns:1fr}.tag{width:max-content}.section-title{display:block}.updated{text-align:inherit;margin-top:4px}}
+    :root{--bg:#f6f7f4;--text:#1d2b27;--muted:#6b7773;--card:#ffffff;--line:#e3e7e2;--green:#0f6b4f;--soft:#edf5f1;--gold:#a36a00}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7}.wrap{width:min(860px,calc(100% - 28px));margin:auto;padding:28px 0 40px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}.brand{font-weight:800;font-size:1.15rem;color:var(--green)}button{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:999px;padding:9px 14px;font-weight:700;cursor:pointer}.hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(25,40,35,.06);margin-bottom:18px}.kicker{color:var(--green);font-weight:800;margin-bottom:8px;font-size:.95rem}h1{margin:0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;letter-spacing:-.03em}.lead{margin:12px 0 0;color:var(--muted);font-size:1.05rem}.count-card{background:var(--soft);border:1px solid #d9e8e0;border-radius:20px;padding:22px;margin-top:22px}.next-label{color:var(--muted);font-size:.9rem;font-weight:700;margin-bottom:4px}.next-name{font-size:1.55rem;font-weight:900;margin-bottom:2px}.next-date{color:var(--green);font-weight:800;margin-bottom:18px}.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.box{background:#fff;border:1px solid var(--line);border-radius:16px;text-align:center;padding:14px 8px}.num{display:block;font-size:2rem;font-weight:900;line-height:1;color:var(--green)}.unit{display:block;color:var(--muted);font-size:.82rem;margin-top:7px;font-weight:700}.section-title{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin:26px 0 12px}h2{font-size:1.35rem;margin:0}.updated{font-size:.85rem;color:var(--muted);text-align:end}.list{display:grid;gap:10px}.item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start}.name{font-weight:900}.date{color:var(--green);font-weight:750;margin-top:2px}.note{grid-column:1/-1;color:var(--muted);font-size:.92rem}.tag{font-size:.75rem;border-radius:999px;padding:5px 9px;background:var(--soft);color:var(--green);font-weight:800;white-space:nowrap}.tag.tentative{background:#fff5df;color:var(--gold)}.notice{margin-top:16px;color:var(--muted);font-size:.92rem}.notice strong{color:var(--text)}footer{margin-top:24px;color:var(--muted);font-size:.85rem;text-align:center}@media(max-width:560px){header{align-items:flex-start}.hero{padding:22px}.timer{grid-template-columns:repeat(2,1fr)}.item{grid-template-columns:1fr}.tag{width:max-content}.section-title{display:block}.updated{text-align:inherit;margin-top:4px}}
   </style>
 </head>
 <body>
   <main class="wrap">
-    <header>
-      <div class="brand" data-i18n="brand">إجازات عُمان</div>
-      <button id="langBtn" type="button">English</button>
-    </header>
-
+    <header><div class="brand" data-i18n="brand">إجازات عُمان</div><button id="langBtn" type="button">English</button></header>
     <section class="hero">
-      <div class="kicker" data-i18n="kicker">سلطنة عمان · 2026</div>
+      <div class="kicker" id="kicker" data-i18n="kicker">سلطنة عمان</div>
       <h1 data-i18n="title">الإجازات القادمة</h1>
       <p class="lead" data-i18n="lead">عداد بسيط لأقرب إجازة رسمية قادمة في سلطنة عمان.</p>
-
       <div class="count-card" aria-live="polite">
-        <div class="next-label" data-i18n="next">أقرب مناسبة</div>
-        <div class="next-name" id="nextName">—</div>
-        <div class="next-date" id="nextDate">—</div>
-        <div class="timer">
-          <div class="box"><span class="num" id="days">0</span><span class="unit" data-i18n="days">يوم</span></div>
-          <div class="box"><span class="num" id="hours">0</span><span class="unit" data-i18n="hours">ساعة</span></div>
-          <div class="box"><span class="num" id="minutes">0</span><span class="unit" data-i18n="minutes">دقيقة</span></div>
-          <div class="box"><span class="num" id="seconds">0</span><span class="unit" data-i18n="seconds">ثانية</span></div>
-        </div>
+        <div class="next-label" data-i18n="next">أقرب مناسبة</div><div class="next-name" id="nextName">—</div><div class="next-date" id="nextDate">—</div>
+        <div class="timer"><div class="box"><span class="num" id="days">0</span><span class="unit" data-i18n="days">يوم</span></div><div class="box"><span class="num" id="hours">0</span><span class="unit" data-i18n="hours">ساعة</span></div><div class="box"><span class="num" id="minutes">0</span><span class="unit" data-i18n="minutes">دقيقة</span></div><div class="box"><span class="num" id="seconds">0</span><span class="unit" data-i18n="seconds">ثانية</span></div></div>
       </div>
     </section>
-
-    <section>
-      <div class="section-title">
-        <h2 data-i18n="upcoming">القائمة القادمة</h2>
-        <div class="updated" data-i18n="updated">آخر تحديث: 24 أبريل 2026</div>
-      </div>
-      <div class="list" id="list"></div>
-      <p class="notice" data-i18n="notice"><strong>ملاحظة:</strong> تواريخ المناسبات الدينية قد تتغير حسب الرؤية والإعلان الرسمي.</p>
-    </section>
-
+    <section><div class="section-title"><h2 data-i18n="upcoming">القائمة القادمة</h2><div class="updated" id="updated"></div></div><div class="list" id="list"></div><p class="notice" data-i18n="notice">ملاحظة: تواريخ المناسبات الدينية قد تتغير حسب الرؤية والإعلان الرسمي.</p></section>
     <footer data-i18n="footer">التوقيت المستخدم: مسقط، سلطنة عمان.</footer>
   </main>
-
   <script>
-    const holidays=[
-      {start:'2026-05-27T00:00:00+04:00',end:'2026-05-31T23:59:59+04:00',status:'tentative',ar:{name:'إجازة عيد الأضحى',date:'27–31 مايو 2026',note:'قابلة للتأكيد حسب الرؤية والإعلان الرسمي.'},en:{name:'Eid Al Adha Holiday',date:'May 27–31, 2026',note:'Subject to official confirmation and moon sighting.'}},
-      {start:'2026-06-18T00:00:00+04:00',end:'2026-06-18T23:59:59+04:00',status:'tentative',ar:{name:'رأس السنة الهجرية',date:'18 يونيو 2026',note:'قد تخضع للتأكيد الرسمي.'},en:{name:'Islamic New Year',date:'June 18, 2026',note:'May be subject to official confirmation.'}},
-      {start:'2026-08-27T00:00:00+04:00',end:'2026-08-27T23:59:59+04:00',status:'tentative',ar:{name:'المولد النبوي الشريف',date:'27 أغسطس 2026',note:'قد تخضع للتأكيد الرسمي.'},en:{name:"Prophet Muhammad's Birthday",date:'August 27, 2026',note:'May be subject to official confirmation.'}},
-      {start:'2026-11-25T00:00:00+04:00',end:'2026-11-26T23:59:59+04:00',status:'confirmed',ar:{name:'إجازة اليوم الوطني',date:'25–26 نوفمبر 2026',note:'إجازة وطنية لمدة يومين.'},en:{name:'National Day Holiday',date:'November 25–26, 2026',note:'Two-day national holiday.'}}
-    ];
-    const t={
-      ar:{brand:'إجازات عُمان',kicker:'سلطنة عمان · 2026',title:'الإجازات القادمة',lead:'عداد بسيط لأقرب إجازة رسمية قادمة في سلطنة عمان.',next:'أقرب مناسبة',days:'يوم',hours:'ساعة',minutes:'دقيقة',seconds:'ثانية',upcoming:'القائمة القادمة',updated:'آخر تحديث: 24 أبريل 2026',notice:'ملاحظة: تواريخ المناسبات الدينية قد تتغير حسب الرؤية والإعلان الرسمي.',footer:'التوقيت المستخدم: مسقط، سلطنة عمان.',confirmed:'مؤكدة',tentative:'قابلة للتأكيد',none:'لا توجد مناسبات قادمة',button:'English',locale:'ar-OM'},
-      en:{brand:'Oman Holidays',kicker:'Sultanate of Oman · 2026',title:'Upcoming Holidays',lead:'A simple countdown to the next official holiday in Oman.',next:'Next occasion',days:'Days',hours:'Hours',minutes:'Minutes',seconds:'Seconds',upcoming:'Upcoming list',updated:'Last updated: April 24, 2026',notice:'Note: Religious holiday dates may change based on moon sighting and official announcements.',footer:'Time zone used: Muscat, Oman.',confirmed:'Confirmed',tentative:'To be confirmed',none:'No upcoming occasions',button:'العربية',locale:'en-OM'}
-    };
-    let lang=localStorage.getItem('omanLang')||'ar';
-    const $=id=>document.getElementById(id);
+    let holidays=[];
+    const fallbackHolidays=[{start:'2026-05-27T00:00:00+04:00',end:'2026-05-31T23:59:59+04:00',status:'tentative',ar:{name:'إجازة عيد الأضحى',date:'27–31 مايو 2026',note:'قابلة للتأكيد حسب الرؤية والإعلان الرسمي.'},en:{name:'Eid Al Adha Holiday',date:'May 27–31, 2026',note:'Subject to official confirmation and moon sighting.'}},{start:'2026-11-25T00:00:00+04:00',end:'2026-11-26T23:59:59+04:00',status:'confirmed',ar:{name:'إجازة اليوم الوطني',date:'25–26 نوفمبر 2026',note:'إجازة وطنية لمدة يومين.'},en:{name:'National Day Holiday',date:'November 25–26, 2026',note:'Two-day national holiday.'}}];
+    const t={ar:{brand:'إجازات عُمان',kicker:'سلطنة عمان',title:'الإجازات القادمة',lead:'عداد بسيط لأقرب إجازة رسمية قادمة في سلطنة عمان.',next:'أقرب مناسبة',days:'يوم',hours:'ساعة',minutes:'دقيقة',seconds:'ثانية',upcoming:'القائمة القادمة',updated:'آخر تحديث',notice:'ملاحظة: تواريخ المناسبات الدينية قد تتغير حسب الرؤية والإعلان الرسمي.',footer:'التوقيت المستخدم: مسقط، سلطنة عمان.',confirmed:'مؤكدة',tentative:'قابلة للتأكيد',none:'لا توجد مناسبات قادمة',button:'English',locale:'ar-OM'},en:{brand:'Oman Holidays',kicker:'Sultanate of Oman',title:'Upcoming Holidays',lead:'A simple countdown to the next official holiday in Oman.',next:'Next occasion',days:'Days',hours:'Hours',minutes:'Minutes',seconds:'Seconds',upcoming:'Upcoming list',updated:'Last updated',notice:'Note: Religious holiday dates may change based on moon sighting and official announcements.',footer:'Time zone used: Muscat, Oman.',confirmed:'Confirmed',tentative:'To be confirmed',none:'No upcoming occasions',button:'العربية',locale:'en-OM'}};
+    let lang=localStorage.getItem('omanLang')||'ar';const $=id=>document.getElementById(id);
     function future(){const now=new Date();return holidays.filter(h=>new Date(h.end)>=now).sort((a,b)=>new Date(a.start)-new Date(b.start))}
     function setLang(l){lang=l;localStorage.setItem('omanLang',l);document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;el.textContent=t[l][key]});$('langBtn').textContent=t[l].button;render();tick()}
-    function render(){const items=future();$('list').innerHTML=items.length?items.map(h=>`<article class="item"><div><div class="name">${h[lang].name}</div><div class="date">${h[lang].date}</div></div><span class="tag ${h.status==='tentative'?'tentative':''}">${t[lang][h.status]}</span><div class="note">${h[lang].note}</div></article>`).join(''):`<article class="item"><div class="name">${t[lang].none}</div></article>`}
+    function render(){const items=future();$('list').innerHTML=items.length?items.map(h=>`<article class="item"><div><div class="name">${h[lang].name}</div><div class="date">${h[lang].date}</div></div><span class="tag ${h.status==='tentative'?'tentative':''}">${t[lang][h.status]||h.status}</span><div class="note">${h[lang].note}</div></article>`).join(''):`<article class="item"><div class="name">${t[lang].none}</div></article>`}
     function tick(){const n=future()[0];if(!n){$('nextName').textContent=t[lang].none;$('nextDate').textContent='';['days','hours','minutes','seconds'].forEach(id=>$(id).textContent='0');return}$('nextName').textContent=n[lang].name;$('nextDate').textContent=n[lang].date;const d=Math.max(0,new Date(n.start)-new Date());const vals={days:Math.floor(d/864e5),hours:Math.floor(d/36e5%24),minutes:Math.floor(d/6e4%60),seconds:Math.floor(d/1e3%60)};Object.keys(vals).forEach(id=>$(id).textContent=vals[id].toLocaleString(t[lang].locale))}
-    $('langBtn').addEventListener('click',()=>setLang(lang==='ar'?'en':'ar'));
-    setLang(lang);setInterval(tick,1000);
+    async function loadData(){try{const r=await fetch(`data/holidays.json?v=${Date.now()}`);if(!r.ok)throw new Error('data file not found');const data=await r.json();holidays=data.holidays||[];$('updated').textContent=`${t[lang].updated}: ${data.lastUpdated||'—'}`;}catch(e){holidays=fallbackHolidays;$('updated').textContent=`${t[lang].updated}: —`;console.warn(e)}setLang(lang)}
+    $('langBtn').addEventListener('click',()=>setLang(lang==='ar'?'en':'ar'));loadData();setInterval(tick,1000);
   </script>
 </body>
 </html>
