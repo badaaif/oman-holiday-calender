@@ -1,0 +1,33 @@
+name: Update Oman holidays data
+
+on:
+  schedule:
+    # Monthly check on the 2nd day at 04:00 UTC.
+    - cron: '0 4 2 * *'
+    # Extra yearly check on January 1st at 04:30 UTC.
+    - cron: '30 4 1 1 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-holidays:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update holidays JSON
+        run: node scripts/update-holidays.js
+
+      - name: Commit updated data if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update Oman holidays data
+          file_pattern: data/holidays.json
